@@ -1,0 +1,123 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #eef2f7;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* -------------------------------------- */
+/* HEADER STYLING */
+/* -------------------------------------- */
+.dashboard-header {
+    background-color: #34495e; /* สีเทาเข้ม */
+    color: white;
+    padding: 25px 20px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.dashboard-header h1 {
+    margin: 0 0 5px 0;
+    font-size: 2.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dashboard-header .material-icons {
+    font-size: 2.5rem;
+    margin-right: 10px;
+    color: #ecf0f1;
+}
+
+.dashboard-header p {
+    margin: 0;
+    font-size: 0.9rem;
+    opacity: 0.7;
+}
+
+/* -------------------------------------- */
+/* BODY/MAIN CONTENT STYLING */
+/* -------------------------------------- */
+.dashboard-body {
+    flex-grow: 1; /* ทำให้ Body ขยายเต็มพื้นที่ที่เหลือ */
+    padding: 30px 20px;
+    max-width: 1100px;
+    margin: 20px auto;
+    width: 100%;
+}
+
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.data-card {
+    background-color: white;
+    border-radius: 10px;
+    padding: 25px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-bottom: 5px solid; 
+    transition: transform 0.3s;
+}
+
+.data-card:hover {
+    transform: translateY(-5px);
+}
+
+.data-card.temperature { border-bottom-color: #e74c3c; } /* แดง */
+.data-card.pressure { border-bottom-color: #f1c40f; } /* เหลือง */
+.data-card.altitude { border-bottom-color: #3498db; } /* น้ำเงิน */
+
+.card-icon {
+    font-size: 3.5rem;
+    margin-bottom: 10px;
+    opacity: 0.8;
+}
+
+.data-card.temperature .card-icon { color: #e74c3c; }
+.data-card.pressure .card-icon { color: #f1c40f; }
+.data-card.altitude .card-icon { color: #3498db; }
+
+.data-card h3 {
+    margin: 5px 0 15px 0;
+    font-size: 1.2rem;
+    color: #555;
+}
+
+.sensor-value {
+    font-size: 4rem;
+    font-weight: 700;
+    color: #2c3e50;
+    display: block;
+}
+
+.unit {
+    font-size: 1.2rem;
+    color: #777;
+    margin-top: 5px;
+    display: block;
+}
+
+/* -------------------------------------- */
+/* FOOTER STYLING */
+/* -------------------------------------- */
+.dashboard-footer {
+    background-color: #bdc3c7; /* สีเทาอ่อน */
+    color: #34495e;
+    padding: 15px 20px;
+    text-align: center;
+    font-size: 0.9rem;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.status-ok {
+    font-weight: bold;
+    color: #27ae60; /* สีเขียว */
+}
